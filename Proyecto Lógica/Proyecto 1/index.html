@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Piedra, Papel o Tijera</title> 
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+
+    <header>
+        <h1>Piedra, Papel o Tijera</h1> 
+    </header>
+    <main>
+        <p class="instrucciones" id="instrucciones">
+            El primero en llegar a 5 puntos gana. <!-- Instruccion del juego -->
+        </p>
+        <div class="marcador"> <!--Marcador de juego -->
+            <p class="nombre nombre-jugador">Jugador</p> 
+            <p class="nombre nombre-computadora">Computadora</p> 
+            <p class="puntos">
+                <span id="puntos-usuario">0</span> <!-- Indicardor puntos del usuario -->
+                <span>-</span>
+                <span id="puntos-computadora">0</span> <!-- Indicardor puntos de la computadora -->
+            </p>
+        </div>
+        <div class="elegi-tu-arma" id="elegi-tu-arma">
+            <h2>Elegí tu arma para el próximo turno</h2> 
+            <div class="armas">
+                <!-- Botones para elegir el arma -->
+                <button class="arma" id="piedra🪨">🪨</button>
+                <button class="arma" id="papel📋">📋</button>
+                <button class="arma" id="tijera✂️">✂️</button>
+                <button class="arma" id="fuego🔥">🔥</button>
+                <button class="arma" id="agua💧">💧</button>
+                <button class="arma" id="esponja🧽">🧽</button>
+                <button class="arma" id="aire💨">💨</button>
+            </div>
+        </div>
+        <!-- Mensajes de resultado de partidas y resultado final del juego -->
+        <div class="mensaje disabled" id="mensaje"> 
+            <p>
+                Usaste <span class="eleccion" id="eleccion-usuario">papel📋</span><br> 
+                y la computadora usó <span class="eleccion" id="eleccion-computadora">piedra🪨</span> 
+            </p>
+            <p id="gana-punto">¡Ganaste un punto! 🔥</p> 
+        </div>
+        <button class="btn disabled" id="reiniciar">Reiniciar juego</button> <!-- Botón para reiniciar el juego -->
+    </main>
+
+    <script src="juego.js"></script> 
+</body>
+</html>
